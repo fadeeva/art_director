@@ -15,27 +15,91 @@ body {
 header {
     margin-top: 90px;
 }
+    header>nav>img {
+        cursor: pointer;
+    }
 
 main {
     margin-top: 45px;
+    position: relative;
 }
 
 #semicircles, #simulator  {
-	position: relative;
+	position: absolute;
+}
+
+#top_left_yellow {
+	z-index: 8;
+    position: absolute;
+    top: -38px;
+}
+
+#bottom_left_yellow {
+	z-index: 7;
+    position: absolute;
+    top: -38px;
+}
+
+#top_right_yellow {
+	z-index: 10;
+    position: absolute;
+    left: 440px;
+    top: -38px;
+}
+
+#bottom_right_yellow {
+	z-index: 9;
+    position: absolute;
+    left: 440px;
+    top: -38px;
+}
+
+#top_left_black {
+	z-index: 6;
+    position: absolute;
+    top: -38px;
+}
+
+#bottom_left_black {
+	z-index: 5;
+    position: absolute;
+    top: -38px;
+}
+
+#animate_noun {
+    z-index: 1;
+    position: absolute;
+    top: 48px;
+}
+
+#inanimate_noun {
+	z-index: 2;
+    position: absolute;
+    top: 40px;
+}
+
+#qualitative_adj {
+	z-index: 3;
+    position: absolute;
+    top: 32px;
+}
+
+#button {
+	z-index: 4;
+    position: absolute;
 }
 
 ul {
     list-style: none;
-    padding: 0;
-    margin: 25px 0 0 0;
+    margin-left: 16px;
 }
 
 li {
-	width: 380px;
-    height: 70px;
-    padding: 0;
+	width: 384px;
+    height: 50px;
+    padding: 20px 0 0 0;
     margin: 0 0 25px 0;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
 }
 
 #button {
@@ -52,5 +116,5 @@ li {
 }
 
 footer {
-    margin-top: 30px;
+    margin-top: 150px;
 }
