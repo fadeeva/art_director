@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Bitter bold";
+    src: url('../fonts/Bitter-Bold.otf');
+}
+
+body {
+    background: url('../img/wood-11.png');
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: "Bitter bold";
+    font-size: 24px;
+}
+
+header {
+    margin-top: 90px;
+}
+
+main {
+    margin-top: 45px;
+}
+
+#semicircles, #simulator  {
+	position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+li {
+	width: 380px;
+    height: 70px;
+    padding: 0;
+    margin: 0 0 25px 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+#button {
+	background: #111;
+    color: #efe543;
+}
+    #button:hover {
+	    cursor: pointer;
+    }
+
+.result {
+	background: #efe543;
+    color: #111;    
+}
+
+footer {
+    margin-top: 30px;
+}
