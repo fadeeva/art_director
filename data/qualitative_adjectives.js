@@ -1,4 +1,3 @@
-/* source: autodestruct.com */
 var qualitativeAdjectives = [
     "здоровенный",
     "миниатюрный",
