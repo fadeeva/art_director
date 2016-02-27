@@ -14,7 +14,23 @@ $(document).ready(function(){
         $("#top_left_yellow").animate({ "top": "215px" }, "slow");
         $("#bottom_left_yellow").animate({ "top": "274px" }, "slow");
         
-        $('footer').animate({ "margin-top": "400px" }, "slow");
+        $('footer').animate({ "margin-top": "410px" }, "slow");
+    });
+    
+    $("#close_menu img").hover(function() {
+        $(this).animate({"opacity": "0"}, "slow");
+    }, function(){
+        $(this).animate({"opacity": "1"}, "slow");
+    });
+    
+    $("#close_menu").click(function() {
+        $("#open_menu").css({"opacity": 0, "visibility": "visible"}).animate({opacity: 1}, "slow");
     })
+    
+    $("#open_menu img").click(function() {
+        $("#open_menu").fadeTo( 400, 0 , function(){ 
+                $(this).css('visibility', 'hidden');
+        });
+    });
     
 });
