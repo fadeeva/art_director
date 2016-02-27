@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    
+    /* ArtDirector open/close */
     $("#button").click(function() {
         $("#qualitative_adj").animate({ "top": "120px" }, "slow");
         $("#inanimate_noun").animate({ "top": "216px" }, "slow");
@@ -16,7 +17,9 @@ $(document).ready(function(){
         
         $('footer').animate({ "margin-top": "410px" }, "slow");
     });
+    /*---------------*/
     
+    /* Menu */
     $("#close_menu img").hover(function() {
         $(this).animate({"opacity": "0"}, "slow");
     }, function(){
@@ -32,5 +35,12 @@ $(document).ready(function(){
                 $(this).css('visibility', 'hidden');
         });
     });
+    
+    $("#close_button img").hover(function() {
+        $(this).animate({"opacity": "0"}, "slow");
+    }, function(){
+        $(this).animate({"opacity": "1"}, "slow");
+    });
+    /*---------------*/
     
 });
