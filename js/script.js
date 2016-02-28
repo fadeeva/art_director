@@ -27,13 +27,16 @@ $(document).ready(function(){
     });
     
     $("#close_menu").click(function() {
-        $("#open_menu").css({"opacity": 0, "visibility": "visible"}).animate({opacity: 1}, "slow");
+        $("#open_menu").css({"opacity": 0, "visibility": "visible", "height": "207px"})
+                       .animate({opacity: 1}, "slow");
     })
     
-    $("#open_menu img").click(function() {
+    $("#close_button img").click(function() {
         $("#open_menu").fadeTo( 400, 0 , function(){ 
                 $(this).css('visibility', 'hidden');
         });
+        $("#works").css({"visibility": "hidden"});
+        $("#words").css({"visibility": "hidden"});
     });
     
     $("#close_button img").hover(function() {
@@ -41,6 +44,17 @@ $(document).ready(function(){
     }, function(){
         $(this).animate({"opacity": "1"}, "slow");
     });
+    
+    $("#main_menu_list li").click(function() {
+        $("#open_menu").animate({"height": "400px"}, "slow")
+        if( $(this).index() == 0 ){
+            $("#works").css({"visibility": "hidden"});
+            $("#words").css({"visibility": "visible"});
+        }else if( $(this).index() == 1 ){
+            $("#words").css({"visibility": "hidden"});
+            $("#works").css({"visibility": "visible"});
+        }
+    })
     /*---------------*/
     
 });

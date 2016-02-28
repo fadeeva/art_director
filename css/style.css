@@ -56,23 +56,55 @@ header {
     cursor: pointer;
 }
 
-#open_menu ul{
+#main_menu_list ul{
 	list-style: none;
     border-top: 1px solid #efe543;
     border-bottom: 1px solid #efe543;
     height: 96px;
 }
 
-#open_menu li{
+#main_menu_list li{
 	float: left;
     width: 166px;
-    margin: auto;
-    margin-top: 40px;
-    margin-left: -30px;
+    margin: 40px auto auto -30px;
+    text-decoration: underline;
+    cursor: pointer;
 }
-    #open_menu li:first-child{
+    #main_menu_list li:first-child{
         padding-right: 50px;
     }
+
+.submenu {
+	visibility: hidden;
+    position: absolute;
+    width: 384px;
+}
+
+#words ul {
+	list-style: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #efe543;
+}
+
+#words li {
+    color: #111;
+    font-size: 12px;
+    margin: 10px;
+    padding: 5px;
+    background: #efe543;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.portfolio {
+	float: left;
+    width: 40px;
+    height: 60px;
+    background: #efe543;
+    margin: 10px;
+}
 
 /*-----------MAIN------------*/
 main {
