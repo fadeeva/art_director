@@ -46,14 +46,53 @@ $(document).ready(function(){
     });
     
     $("#main_menu_list li").click(function() {
-        $("#open_menu").animate({"height": "400px"}, "slow")
+        $("#open_menu").animate({"height": "320px"}, "slow")
         if( $(this).index() == 0 ){
             $("#works").css({"visibility": "hidden"});
             $("#words").css({"visibility": "visible"});
+            $("#words_list").children().remove('ul');
+            $("#words li").removeClass("click");
         }else if( $(this).index() == 1 ){
             $("#words").css({"visibility": "hidden"});
             $("#works").css({"visibility": "visible"});
+            $("#words_list").children().remove('ul');
+            $("#words li").removeClass("click");
         }
+    })
+    /*---------------*/
+    
+    /* SubMenu */
+    $("#words li").click(function() {
+        var wordsList = $("#words_list");
+        var liIndex = $(this).index();
+        var words = '<ul>';
+        var typeOfArray;
+        var height = $( document ).height();
+        
+        wordsList.children().remove('ul');
+        $("#words li").removeClass("click");
+        $(this).addClass("click");
+        
+        switch(liIndex) {
+            case 0 : typeOfArray = qualitativeAdjectives;
+            break;
+            case 1 : typeOfArray = inanimateNoun;
+            break;
+            case 2 : typeOfArray = animateNoun;
+            break;
+            default:
+                typeOfArray = qualitativeAdjectives;
+            break;
+        }
+                         
+        for(var i = 0; i < typeOfArray.length; i++){
+            words += '<li>' + typeOfArray[i] + '</li>';
+        }
+    
+        words += '</ul>';
+        
+        $("#open_menu").animate({"height": height}, "slow")
+        wordsList.append(words);
     })
     /*---------------*/
     

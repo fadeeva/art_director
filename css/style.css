@@ -89,13 +89,18 @@ header {
 }
 
 #words li {
-    color: #111;
     font-size: 12px;
-    margin: 10px;
-    padding: 5px;
-    background: #efe543;
-    border-radius: 8px;
+    margin: 0px auto 10px auto;
+    padding: 5px;    
+    border: 1px solid #efe543;
+    /*border-radius: 8px;*/
     cursor: pointer;
+    width: 250px;
+}
+
+.click {
+    background: #efe543;
+    color: #111;
 }
 
 .portfolio {
@@ -104,6 +109,17 @@ header {
     height: 60px;
     background: #efe543;
     margin: 10px;
+}
+
+#words_list {
+	margin-top: 140px;
+    color: darkolivegreen;
+    font-size: 12px;
+}
+
+#words_list ul {
+	list-style: decimal;
+    text-align: left;
 }
 
 /*-----------MAIN------------*/
