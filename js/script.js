@@ -2,6 +2,8 @@ $(document).ready(function(){
     
     /* ArtDirector open/close */
     $("#button").click(function() {
+        setNewChoice();
+
         $("#qualitative_adj").animate({ "top": "120px" }, "slow");
         $("#inanimate_noun").animate({ "top": "216px" }, "slow");
         $("#animate_noun").animate({ "top": "312px" }, "slow");
@@ -97,3 +99,26 @@ $(document).ready(function(){
     /*---------------*/
     
 });
+
+function setNewChoice(){
+    var newChoice = randomChoice();
+        
+    $("#qualitative_adj").empty();
+    $("#inanimate_noun").empty();
+    $("#animate_noun").empty();
+
+    $("#qualitative_adj").append(qualitativeAdjectives[newChoice.qualitativeAdjectives]);
+    $("#inanimate_noun").append(inanimateNoun[newChoice.inanimateNoun]);
+    $("#animate_noun").append(animateNoun[newChoice.animateNoun]);
+}
+
+function randomChoice(){
+    var oRandomWords = { animateNoun, inanimateNoun, qualitativeAdjectives };
+    oRandomWords.animateNoun = Math.floor(Math.random() * animateNoun.length);
+    oRandomWords.inanimateNoun = Math.floor(Math.random() * inanimateNoun.length);
+    oRandomWords.qualitativeAdjectives = Math.floor(Math.random() * qualitativeAdjectives.length);
+    
+    console.log(animateNoun.length, inanimateNoun.length, qualitativeAdjectives.length)
+    console.log(oRandomWords)
+    return oRandomWords;
+}
