@@ -1,2 +1,2 @@
 # ART director simulator
-*source: autodestruct.com*
+*source: http://autodestruct.com*
